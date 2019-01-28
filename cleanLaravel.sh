@@ -13,6 +13,7 @@ which php > /dev/null 2>&1
 RES=$?
 if [[ $RES -ne 0 ]]; then
     echo 'PHP is not installed'
+    exit 1
 else
     echo 'PHP is installed'
 fi
