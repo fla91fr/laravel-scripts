@@ -1,4 +1,24 @@
 #!/bin/bash
+
+
+composer -v > /dev/null 2>&1
+RES=$?
+if [[ $RES -ne 0 ]]; then
+    echo 'Composer is not installed !'
+    exit 1
+else
+    echo 'Composer is installed'
+fi
+
+which php > /dev/null 2>&1
+RES=$?
+if [[ $RES -ne 0 ]]; then
+    echo 'PHP is not installed'
+else
+    echo 'PHP is installed'
+fi
+
+
 CMDCOMPOSER="composer"
 CMDARTISAN="php artisan"
 
