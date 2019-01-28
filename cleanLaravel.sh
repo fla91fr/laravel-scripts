@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 composer -v > /dev/null 2>&1
 RES=$?
 if [[ $RES -ne 0 ]]; then
