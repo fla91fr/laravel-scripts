@@ -6,7 +6,7 @@ wget -O cleanLaravel.sh https://github.com/fla91fr/laravel-scripts/raw/master/cl
 chmod +x cleanLaravel.sh
 ```
 
-## How to use : 
+### How to use : 
 ```
 ./cleanLaravel.sh
 ```
