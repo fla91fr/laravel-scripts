@@ -8,6 +8,5 @@ chmod +x cleanLaravel.sh
 
 ## How to use : 
 ```
-
 ./cleanLaravel.sh
 ```
