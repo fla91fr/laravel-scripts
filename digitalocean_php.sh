@@ -2,6 +2,11 @@
 PHP_VERSION="7.3"
 LANG=en_GB.UTF-8
 
+echo "Remove mysql"
+sudo apt-get remove -y mysql-*
+echo "Remove traces of mysql"
+sudo apt-get purge -y mysql-*
+
 # Add PHP 7.x.x Repository
 sudo add-apt-repository ppa:ondrej/php -y
 
