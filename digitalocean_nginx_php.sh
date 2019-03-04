@@ -89,6 +89,13 @@ echo ";opcache.validate_permission=0" >> /etc/php/${PHP_VERSION}/fpm/php.ini
 echo ";opcache.validate_root=0" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
 echo ";opcache.opt_debug_level=0" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
 
+echo "----------------------"
+echo "Create opcache directories"
+echo "----------------------"
+sudo mkdir /var/www/html/.opcache_logs
+sudo mkdir /var/www/html/.opcache
+
+service php${PHP_VERSION}-fpm restart   
 
 echo "----------------------"
 echo "Remove useless packages"
