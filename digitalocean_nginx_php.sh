@@ -53,6 +53,44 @@ sudo apt-get -y install php${PHP_VERSION}-fpm
 sudo apt-get -y install unzip
 
 echo "----------------------"
+echo "Change opcache config"
+echo "----------------------"
+echo "[opcache]" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo "opcache.enable=1" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo "opcache.enable_cli=0" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo "opcache.memory_consumption=128" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo "opcache.interned_strings_buffer=16" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo "opcache.max_accelerated_files=20000" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.max_wasted_percentage=5" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.use_cwd=1" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo "opcache.validate_timestamps=1" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo "opcache.revalidate_freq=3600" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.revalidate_path=0" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo "opcache.save_comments=0" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo "opcache.enable_file_override=1" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.optimization_level=0x7FFFBFFF" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.dups_fix=0" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.blacklist_filename=" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.max_file_size=0" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.consistency_checks=0" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.force_restart_timeout=180" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo "opcache.error_log=/var/www/html/.opcache_logs" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo "opcache.log_verbosity_level=4" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.preferred_memory_model=" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.protect_memory=0" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.restrict_api=" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.mmap_base=" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo "opcache.file_cache=/var/www/html/.opcache" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.file_cache_only=0" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.file_cache_consistency_checks=1" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.file_cache_fallback=1" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.huge_code_pages=1" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.validate_permission=0" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.validate_root=0" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+echo ";opcache.opt_debug_level=0" >> /etc/php/${PHP_VERSION}/fpm/php.ini 
+
+
+echo "----------------------"
 echo "Remove useless packages"
 echo "----------------------"
 sudo apt-get -y autoremove
