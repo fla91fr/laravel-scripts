@@ -48,6 +48,7 @@ sudo apt-get -y install php${PHP_VERSION}-soap
 sudo apt-get -y install php${PHP_VERSION}-zip
 sudo apt-get -y install php${PHP_VERSION}-sqlite
 sudo apt-get -y install php${PHP_VERSION}-mysql
+sudo apt-get -y install php${PHP_VERSION}-fpm
 sudo apt-get -y install unzip
 
 echo "----------------------"
