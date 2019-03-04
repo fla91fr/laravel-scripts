@@ -51,9 +51,9 @@ sudo apt-get -y install php${PHP_VERSION}-mysql
 sudo apt-get -y install unzip
 
 # Upgrade MySQL Version 5.7.x
-sudo apt-get -y install mysql-server
+#sudo apt-get -y install mysql-server
 #sudo service mysql start
-sudo mysql_upgrade -u root --force --upgrade-system-tables
+#sudo mysql_upgrade -u root --force --upgrade-system-tables
 
 # Create User and Database
 #mysql -u root -e "create user homestead;create database homestead;grant all on homestead.* to homestead@localhost identified by 'secret';"
