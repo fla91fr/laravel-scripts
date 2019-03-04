@@ -14,13 +14,14 @@ echo "----------------------"
 echo "Apt get upgrade"
 echo "----------------------"
 sudo apt-get -y upgrade
-rm -f /etc/nginx/sites-enabled/*
-rm -f /etc/nginx/sites-available/*
 
 echo "----------------------"
 echo "Install NGINX"
 echo "----------------------"
 sudo apt-get -y install nginx
+rm -f /etc/nginx/sites-enabled/*
+rm -f /etc/nginx/sites-available/*
+rm -f /var/www/html/*
 
 echo "----------------------"
 echo "Add ufw rule for nginx : Nginx HTTP"
