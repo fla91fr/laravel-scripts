@@ -13,12 +13,12 @@ sudo apt-get -y update
 echo "----------------------"
 echo "Apt get upgrade"
 echo "----------------------"
-sudo apt-get upgrade -y
+sudo apt-get -y upgrade
 
 echo "----------------------"
 echo "Install NGINX"
 echo "----------------------"
-sudo apt install nginx
+sudo apt-get -y install nginx
 
 echo "----------------------"
 echo "Add ufw rule for nginx : Nginx HTTP"
@@ -51,7 +51,7 @@ sudo apt-get -y install unzip
 echo "----------------------"
 echo "Remove useless packages"
 echo "----------------------"
-sudo apt autoremove
+sudo apt-get -y autoremove
 
 echo "----------------------"
 echo "Composer install"
@@ -63,6 +63,9 @@ sudo cp composer.phar /usr/bin/composer
 
 echo "PHP version : "
 php -v |head -1
+
+echo "NGINX version : "
+nginx -v
 
 # End
 echo
