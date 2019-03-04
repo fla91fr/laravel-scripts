@@ -5,11 +5,15 @@ LANG=en_GB.UTF-8
 # Add PHP 7.x.x Repository
 sudo add-apt-repository ppa:ondrej/php -y
 
-# Update
 echo "----------------------"
 echo "Apt get update"
 echo "----------------------"
 sudo apt-get -y update
+
+echo "----------------------"
+echo "Apt get upgrade"
+echo "----------------------"
+sudo apt-get upgrade -y
 
 echo "----------------------"
 echo "Install NGINX"
