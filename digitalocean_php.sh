@@ -7,6 +7,9 @@ sudo apt-get remove -y mysql-*
 echo "Remove traces of mysql"
 sudo apt-get purge -y mysql-*
 
+#Remove useless packages
+sudo apt autoremove
+
 # Add PHP 7.x.x Repository
 sudo add-apt-repository ppa:ondrej/php -y
 
