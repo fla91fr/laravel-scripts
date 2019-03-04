@@ -14,6 +14,8 @@ echo "----------------------"
 echo "Apt get upgrade"
 echo "----------------------"
 sudo apt-get -y upgrade
+rm -f /etc/nginx/sites-enabled/*
+rm -f /etc/nginx/sites-available/*
 
 echo "----------------------"
 echo "Install NGINX"
