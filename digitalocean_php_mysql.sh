@@ -5,6 +5,9 @@ LANG=en_GB.UTF-8
 # Add PHP 7.x.x Repository
 sudo add-apt-repository ppa:ondrej/php -y
 
+#Install MySQL APT GPG key
+sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 5072E1F5
+
 # Copy filename from http://dev.mysql.com/downloads/repo/apt/
 mysql_apt_deb_file=mysql-apt-config_0.8.9-1_all.deb
 
