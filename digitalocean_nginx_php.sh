@@ -94,6 +94,7 @@ echo "Create opcache directories"
 echo "----------------------"
 sudo mkdir /var/www/html/.opcache_logs
 sudo mkdir /var/www/html/.opcache
+chmod 777 /var/www/html/.opcache*
 
 service php${PHP_VERSION}-fpm restart   
 
