@@ -17,10 +17,7 @@ sudo add-apt-repository ppa:ondrej/php -y
 sudo apt-get -y update
 
 #upgrade OS
-DEBIAN_FRONTEND=noninteractive sudo apt-get upgrade -q -y -u  -o 
-   Dpkg::Options::="--force-confdef" --allow-downgrades 
-   --allow-remove-essential --allow-change-held-packages 
-   --allow-change-held-packages --allow-unauthenticated;
+sudo apt-get upgrade -y
 
 # Add Module for php ${PHP_VERSION}
 sudo apt-get -y install php${PHP_VERSION}-pdo
