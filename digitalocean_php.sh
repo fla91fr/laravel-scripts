@@ -17,7 +17,7 @@ sudo add-apt-repository ppa:ondrej/php -y
 sudo apt-get -y update
 
 #upgrade OS
-sudo apt-get upgrade
+sudo apt-get upgrade -y
 
 # Add Module for php ${PHP_VERSION}
 sudo apt-get -y install php${PHP_VERSION}-pdo
