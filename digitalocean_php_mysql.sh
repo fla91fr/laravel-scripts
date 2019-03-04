@@ -58,6 +58,9 @@ sudo mysql_upgrade -u root --force --upgrade-system-tables
 # Create User and Database
 #mysql -u root -e "create user homestead;create database homestead;grant all on homestead.* to homestead@localhost identified by 'secret';"
 
+#Remove useless packages
+sudo apt autoremove
+
 # Composer install 
 sudo rm -rf $HOME/.composer
 sudo rm -f /usr/bin/composer
