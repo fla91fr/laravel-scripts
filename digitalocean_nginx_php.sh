@@ -2,24 +2,29 @@
 PHP_VERSION="7.3"
 LANG=en_GB.UTF-8
 
-echo "Remove mysql"
-sudo apt-get remove -y mysql-*
-echo "Remove traces of mysql"
-sudo apt-get purge -y mysql-*
-
-#Remove useless packages
-sudo apt autoremove
-
 # Add PHP 7.x.x Repository
 sudo add-apt-repository ppa:ondrej/php -y
 
 # Update
+echo "----------------------"
+echo "Apt get update"
+echo "----------------------"
 sudo apt-get -y update
 
-#upgrade OS
-sudo apt-get upgrade -y
+echo "----------------------"
+echo "Install NGINX"
+echo "----------------------"
+sudo apt install nginx
+
+echo "----------------------"
+echo "Add ufw rule for nginx : Nginx HTTP"
+echo "----------------------"
+sudo ufw allow 'Nginx HTTP'
 
 # Add Module for php ${PHP_VERSION}
+echo "----------------------"
+echo "Install PHP ${PHP_VERSION} packages"
+echo "----------------------"
 sudo apt-get -y install php${PHP_VERSION}-pdo
 sudo apt-get -y install php${PHP_VERSION}-mbstring
 sudo apt-get -y install php${PHP_VERSION}-tokenizer
@@ -39,24 +44,21 @@ sudo apt-get -y install php${PHP_VERSION}-sqlite
 sudo apt-get -y install php${PHP_VERSION}-mysql
 sudo apt-get -y install unzip
 
-#Remove useless packages
+echo "----------------------"
+echo "Remove useless packages"
+echo "----------------------"
 sudo apt autoremove
 
-# Composer install 
+echo "----------------------"
+echo "Composer install"
+echo "----------------------"
 sudo rm -rf $HOME/.composer
 sudo rm -f /usr/bin/composer
 sudo curl -sS https://getcomposer.org/installer | php
 sudo cp composer.phar /usr/bin/composer
 
-# Remove File and Folder
-rm ${mysql_apt_deb_file}
-
 echo "PHP version : "
 php -v |head -1
-
-echo
-echo "Mysql version : "
-mysql -V |head -1
 
 # End
 echo
@@ -64,4 +66,4 @@ echo "done!"
 
 
 
-exit
+exit 0
