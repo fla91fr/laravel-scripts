@@ -10,10 +10,10 @@ echo "Apt get update"
 echo "----------------------"
 sudo apt-get -y update
 
-echo "----------------------"
-echo "Apt get upgrade"
-echo "----------------------"
-sudo apt-get -y upgrade
+#echo "----------------------"
+#echo "Apt get upgrade"
+#echo "----------------------"
+#sudo apt-get -y upgrade
 
 echo "----------------------"
 echo "Install NGINX"
